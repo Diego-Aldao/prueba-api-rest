@@ -1,0 +1,186 @@
+/*
+  COLOR PRINCIPAL #f64672;
+*/
+:root {
+  --primary: #f64672;
+}
+
+/**********FUENTES************/
+@font-face {
+  font-family: "Outfit-light";
+  src: url(/front/fonts/Outfit-Light.ttf);
+}
+@font-face {
+  font-family: "Outfit-Regular";
+  src: url(/front/fonts/Outfit-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Outfit-Medium";
+  src: url(/front/fonts/Outfit-Medium.ttf);
+}
+
+/**********GENERALES************/
+* {
+  font-family: "Outfit-light";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Outfit-Regular";
+}
+
+.strong {
+  font-family: "Outfit-Medium";
+}
+
+body {
+  background: #f5f5f5;
+  min-height: 100vh;
+}
+
+img {
+  object-fit: contain;
+  height: 250px;
+  width: 100%;
+  max-width: 240px;
+}
+
+/**********NAVBAR************/
+.navbar {
+  background: #f64672;
+}
+.img-logo {
+  width: 55px;
+  height: 55px;
+  margin-right: 20px;
+}
+
+/**********CONTENDOR BOOTSTRAP************/
+.container-fluid {
+  background: url("/front/images/wave.svg") center / cover;
+  min-height: calc(100vh - 137px);
+}
+
+/**********AGREGAR PRODUCTO*********/
+.btn-outline-primary {
+  border-color: #f64672;
+  color: #f64672;
+}
+.btn-outline-primary:hover {
+  background: #f64672;
+  color: white;
+  border-color: #f64672;
+}
+
+/**********CONTENIDO PRINCIPAL************/
+#contenedor-tarjetas {
+  max-width: 1300px;
+}
+
+/**********CARD************/
+.card {
+  border: none;
+  border-radius: 0%;
+  box-shadow: 1px 1px 15px rgb(236, 236, 236);
+  min-width: 260px;
+}
+
+.card-body {
+  background: #f8f8f8;
+}
+
+.precio {
+  font-size: 1.5rem;
+}
+.card-subtitle {
+  font-size: 0.8rem;
+}
+.card-text {
+  font-size: 0.9rem;
+}
+.cuota {
+  font-size: 0.8rem;
+  font-family: "Outfit-Medium";
+}
+.colores {
+  width: 100%;
+}
+.cuota,
+.color {
+  padding: 7px;
+  border: 1px solid rgb(226, 226, 226);
+  margin-left: 10px;
+}
+.color {
+  min-height: 32px;
+  min-width: 28px;
+}
+.botones i {
+  margin-left: 5px;
+}
+.btn-editar {
+  position: absolute;
+  top: 20px;
+  left: -10px;
+}
+
+.efecto-cards {
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#ffd33d),
+    color-stop(17%, #ea4aaa),
+    color-stop(34%, #b34bff),
+    color-stop(51%, #01feff),
+    color-stop(68%, #ffd33d),
+    color-stop(85%, #ea4aaa),
+    to(#b34bff)
+  );
+  background: linear-gradient(
+    90deg,
+    #ffd33d,
+    #ea4aaa 17%,
+    #b34bff 34%,
+    #01feff 51%,
+    #ffd33d 68%,
+    #ea4aaa 85%,
+    #b34bff
+  );
+  top: 0px;
+  left: 0px;
+  background-size: 300% 100%;
+  -webkit-animation: animacion-arcoiris 2s linear infinite;
+  animation: animacion-arcoiris 2s linear infinite;
+}
+@keyframes animacion-arcoiris {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0;
+  }
+}
+
+/**********ALERTAS BOTONES************/
+.contenedor-alerta,
+.contenedor-editar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 1s;
+  background: rgba(0, 0, 0, 0.459);
+}
+.contenedor-editar {
+  opacity: 1;
+}

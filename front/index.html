@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--FONT AWESOME-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--BOOTSTRAP-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <!--CSS LOCAL-->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Productos</title>
+  </head>
+  <body>
+    <!--INICIO NAVBAR-->
+    <nav class="navbar navbar-light text-white">
+      <a
+        class="
+          navbar-brand
+          d-flex
+          align-items-center
+          text-capitalize text-white
+        "
+        href="#"
+      >
+        <img
+          src="/front/images/logo.png"
+          class="d-inline-block align-top img-logo text-dark"
+          alt=""
+        />
+        <p class="m-0 text-dark strong text-uppercase">tienda online</p>
+      </a>
+    </nav>
+    <!--FIN NAVBAR-->
+    <div class="container-fluid">
+      <!-- INICIO HEADER -->
+      <div class="row text-center text-dark mb-5 header">
+        <div class="col-lg-7 mx-auto py-5">
+          <h1 class="display-5 text-uppercase strong">mis productos</h1>
+        </div>
+      </div>
+      <!-- FIN HEADER -->
+      <!--AGREGAR PRODUCTO-->
+      <div class="col-12 my-5">
+        <button
+          type="button"
+          class="btn btn-outline-primary btn-sm px-3 text-capitalize"
+          data-target="#mi-modal"
+          data-toggle="modal"
+        >
+          agregar producto
+        </button>
+      </div>
+      <!--FIN AGREGAR PRODUCTO-->
+      <!-- INICIO CONTENIDO PRINCIPAL -->
+      <div
+        class="row d-flex justify-content-center m-auto"
+        id="contenedor-tarjetas"
+      ></div>
+      <!-- FIN CONTENIDO PRINCIPAL -->
+    </div>
+    <!--INICIO CONTENIDO OCULTO-->
+    <!--ALERTA DE BOTON-->
+    <div
+      class="
+        contenedor-alerta
+        col-12
+        bg-black
+        align-items-center
+        justify-content-center
+        d-none
+      "
+    >
+      <div class="alert mi-alerta col-12 col-sm-10 text-center" role="alert">
+        <p class="text-capitalize m-0 mensaje-alerta"></p>
+      </div>
+    </div>
+    <!--DIV EDITAR-->
+    <div
+      class="
+        contenedor-editar
+        col-12
+        bg-black
+        d-none
+        align-items-center
+        justify-content-center
+      "
+    ></div>
+    <div class="modal" tabindex="-1" id="mi-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-capitalize">agregar prodcuto</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1" class="text-capitalize"
+                  >nombre del producto:</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1" class="text-capitalize"
+                  >precio del producto:</label
+                >
+                <input type="number" class="form-control" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer text-capitalize">
+            <button
+              type="button"
+              class="btn btn-outline-secondary text-capitalize"
+              data-dismiss="modal"
+            >
+              cerrar
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-success text-capitalize btn-añadir"
+              data-dismiss="modal"
+            >
+              guardar <i class="fas fa-check-circle"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--FIN CONTENIDO OCULTO-->
+    <!--INICIO FOOTER-->
+    <footer
+      class="text-muted p-3 d-flex align-items-center justify-content-center"
+    >
+      <p class="strong m-0 text-capitalize">tienda online &copy;</p>
+    </footer>
+    <!--FIN FOOTER-->
+    <!--BOOTSTRAP JS-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+    <!--JS LOCAL-->
+    <script src="js/index.js"></script>
+  </body>
+</html>
